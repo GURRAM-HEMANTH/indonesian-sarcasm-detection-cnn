@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        /* General Body Styling */
+        body {
+            background: linear-gradient(135deg, #6e7a8f, #2a3a44);
+            color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: rgba(0, 0, 0, 0.6) !important;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff6f61;
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #f8f9fa;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin-left: 300px;
+            font-family: cursive;
+            padding: 20px;
+            font-size: 1.2rem;
+            transition: border-color 0.3s;
+            width: 50%; /* Make the textarea take up full width */
+            min-height: 100px; /* Set minimum height for better appearance */
+            resize: vertical; /* Allows vertical resizing only */
+        }
+
+        .form-control:focus {
+            border-color: #ff6f61;
+            box-shadow: 0 0 5px rgba(255, 111, 97, 0.6);
+        }
+
+        /* Submit Button Styling */
+        button {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff3e28;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin-right: 15px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-control {
+                font-size: 1rem;
+                min-height: 150px; /* Adjust minimum height for smaller screens */
+            }
+
+            button {
+                font-size: 1rem;
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop>
+        <source src="static/bv.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 200px;">
+                    <b><i><a class="nav-link active" href="/" style="font-size:30px; color:darkorange;">Home</a></i></b>
+                    <b><i><a class="nav-link" href="/abstract" style="font-size:30px; color:darkorange;">About</a></i></b>
+                    <b><i><a style="font-size:30px; color: darkorange;" class="nav-link active" href="/predict">Index</a></i></b>
+                    <b><i> <a style="font-size:30px; color: darkorange;" class="nav-link" href="/chart">Chart</a></i></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5" style="text-align: center;">
+        <h1>Input Data For Sarcasm Detection</h1>
+      
+        <form action='/predict' method='POST'>
+            <div class="container mt-5">
+                <b><h2 style="color: black;">Sarcasm Comments Analysis</h2></b>
+                <br>
+                <br>
+                <div class="form-group">
+                    <h4>Give The Text Here </h4>
+                    <textarea class="form-control" id="text_input" name="text_input" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Go for Prediction</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

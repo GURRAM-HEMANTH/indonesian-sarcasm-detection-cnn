@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('static/bg.jpg'); /* Background image set here */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        /* Video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        /* Transparent Navbar */
+        nav {
+            background-color: transparent !important;  /* Make navbar transparent */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Optional shadow for visibility */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 300px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-style: italic;
+        }
+
+        nav ul li a:hover {
+            background-color: #d49f9f;
+        }
+
+        /* Center content */
+        .content-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            color: white;
+            width: 100%; /* Adjust width as needed */
+            max-width: 900px; /* Limit maximum width */
+            padding: 10px;
+            
+            margin-bottom: 700px;
+            border-radius: 10px;
+        }
+        .content-overlay p b span {
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            margin-left: 350px;
+        }
+        p {
+            font-size: larger;
+            color: black;
+            background-color: white;
+            text-align: justify;
+            line-height: 1.4;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <!-- <video class="video-background" autoplay muted loop>
+        <source src="static/v1.mp4" type="video/mp4">
+    </video> -->
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav" style="margin-left: 200px;"> <!-- Align navbar to the right -->
+                    <b><i><a class="nav-link active" href="/" style="font-size:30px; color:darkorange;">Home</a></i></b>
+                    <b><i><a class="nav-link" href="/abstract" style="font-size:30px; color:darkorange;">About</a></i></b>
+                    <b><i><a class="nav-link" href="/login" style="font-size:30px; color:darkorange;">Login</a></i></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Content Overlay -->
+    <div class="container mt-5">
+        <div class="content-overlay">
+           
+            <p style="padding: 20px;"><b> <span>Abstract</span> <br> <br> Sarcasm detection presents unique challenges due to the complex linguistic and 
+                contextual nature of sarcastic expressions. Understanding sarcasm in text requires advanced methods capable of capturing nuanced patterns 
+                that are not easily detectable by traditional approaches. In this study, we propose the use of Convolutional Neural Networks (CNN) for sarcasm 
+                detection. The CNN model is designed to identify and classify sarcastic content by learning intricate patterns from the text. Our approach 
+                demonstrates that CNNs, with their ability to effectively capture spatial hierarchies and context in textual data, offer superior performance 
+                in detecting sarcasm compared to simpler methods. The study also emphasizes the importance of sophisticated data augmentation techniques to 
+                address issues like data imbalance, further enhancing the model’s effectiveness. This work contributes to advancing sarcasm detection, 
+                providing valuable insights for applications in sentiment analysis and natural language understanding.</b></p>
+        </div>
+    </div>
+
+</body>
+</html>
